@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset = "utf-8">
+<title>예제</title>
+<style>
+	.col-1{width: 8.33%;}
+        .col-2{width: 16.66%;}
+        .col-3{width: 25%;}
+        .col-4{width: 33.33%;}
+        .col-5{width: 41.66%;}
+        .col-6{width: 50%;}
+        .col-7{width: 58.33%;}
+        .col-8{width: 66.66%;}
+        .col-9{width: 75%;}
+        .col-10{width: 83.33%;}
+        .col-11{width: 91.66%;}
+        .col-12{width: 100%;}
+	header{
+		background-color: yellow;
+		position: relative;
+	}
+	nav{
+		background-color: rgb(33, 255, 33);
+		position: absolute;
+		right: 5px;
+		bottom: 5px;
+	}
+	.a{
+		border:2px solid gray;
+	}
+	section{
+		height: 150px;
+		background-color: darkgray;
+		margin-top: 5px;
+		
+	}
+	article{
+		height: 40px;
+		background-color: beige;
+		margin:5px;
+		border-radius: 5px;
+		
+	}
+	aside{
+		background-color: orange;
+		height: 40px;
+		position: absolute;
+		right: 10px;
+		top: 100px;
+		text-align:center;
+	}
+	footer{
+		background-color: yellow;
+		position: absolute;
+		bottom: 0;
+	}
+</style>
+</head>
+<body>
+	<header class="col-12 a">
+		<h2>머리말 입니다.</h2>
+		<nav class="a">내비게이션 영역, 이전, 이후, 홈</nav>
+	</header>
+	<aside>광고입니다. 계란 사세요, 계란~~</aside>
+	<section class="col-8 a">
+		<article class="a">첫 번째 기사</article>
+		<article class="a">두 번째 기사</article>
+		<article class="a">세 번째 기사</article>
+	</section>
+	<footer class="col-12">꼬리말 입니다. 회사 연락처 등</footer>
+</body>
+</html>
+
+
+
+
+

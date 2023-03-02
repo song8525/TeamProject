@@ -1,0 +1,95 @@
+transform(모양 변환)
+    요소의 모양을 변화시키는 속성.
+    속성값은 다음의 함수를 사용.
+    1) 위치 변환 - translate.
+        translate(x, y) - 원래 위치에서 x, y 만큼 이동.
+        translateX(x) - x 축으로만 이동.
+        translateY(y) - y 축으로만 이동.
+    2) 각도 변환 - rotate(각도). 단위 = deg
+        기본 방향 : 시계 방향. '-'사용시 반시계 방향.
+    3) 크기 변환 - scale. 배수로 변환.(축소는 '-'가 아닌 소수점)
+        scale(x, y) : 너비, 높이 둘다 변환.
+        scaleX(x) : 좌우로만 변환.
+        scaleY(y) : 위아래로만 변환.
+    4) 기울기 변환 - skew(각도). 단위 = deg.
+        skew(deg, deg) - x축, y축 모두 기울기 변환.
+        skewX(x) - x축으로만 기울기 변환.
+        skewY(y) - y축으로만 기울기 변환.
+        (기울어지는 기준은 좌측 상단)
+    6) 종합 변환 - metrix
+        matrix(scaleX, skewY, skewX, scaleY, translateX, translateY)
+
+transition(변환 효과 - 속도 지연)
+    transform, 너비/높이 변화, 배경색/컬러 변화 등에
+    시간지연 효과를 주어 요소에 간단한 애니메이션 효과를 부여.
+    1) transition-delay : 변환 시작 시간을 지연.
+    2) transition-duration : 변환 시작부터 완료까지의 시간.
+    3) transition-property : 시간을 지정할 변환 속성을 설정.
+    4) transition-timing-function : 변환 기간의 시간을 함수로 처리.
+        함수
+        1) ease : 느린 시작, 빠른 진행, 느린 종료
+        2) linear : 일정한 시간(기본값)
+        3) ease-in : 느린 시작, 일정한 진행 및 종료
+        4) ease-out : 일정한 시작 및 진행, 느린 종료
+        5) ease-in-out : 느린 시작, 일정한 진행, 느린 종료
+        (https://cubic-bezier.com/#.17,.67,.83,.67)
+    5) transition : property, duration 만 설정하는 단축 속성.
+
+이미지 슬라이더 만들기
+    슬라이더 만드는 방법은 매우 많음.
+    라디오버튼, 비순서목록, 레이블을 활용하는 방법,.
+
+    가급적이면 직접 만들지 말고, 기존 템플릿을 활용하는 것이 좋음.
+    bxSlider, bootstrap 등
+
+테이블 스타일링
+
+드롭다운 메뉴 만들기
+
+배경 이미지만 투명하게 처리하기
+    배경을 반투명하게 하면 내부 요소도 같이 반투명하게 됨.
+
+반응형 웹 만들기(Responsive Web)
+    반응형 웹이란 : 하나의 사이트 페이지로 데스크탑, 스마트폰
+    스마트패드 등 접속하는 장치(디스플레이 종류)에 따라 요소의
+    크기 및 배치, 표시등을 자동으로 변하도록 만든 페이지.
+
+    html head 태그의 meta 태그에 viewport를 설정하여
+    반응형 웹 페이지를 제작.
+
+    meta 태그란 : 해당 페이지의 정보(메타데이터)를 제공하기 위해
+        사용하는 태그
+        종류)
+        1. name - 메타데이터의 종류를 지정하는 속성.
+            주요 속성값
+            1) description : 페이지에 대한 설명.
+            2) author : 페이지 작성자 이름.
+            3) keyword : 검색 엔진용 키워드 등록.
+            4) viewport : 반응형 웹 페이지임을 표시.
+        2. content - name에 따라 분류된 메타데이터의 내용을 작성하는 속성.
+
+viewport : 반응형 웹을 위한 meta 속성.
+    content에 들어가는 속성값
+    1) width=device-width : 페이지의 너비를 기기의 스크린 너비로 설정.
+    2) initial-scale=1.0 : 처음 페이지 오픈 시 원래 크기를 사용(0.0 ~ 1.0)
+    3) minimum-scale : 줄일 수 있는 최소 크기
+            (줌 기능 사용 시) - 0 ~ 10
+    4) maximum-scale : 확대할 수 있는 최대 크기
+            (줌 기능 사용 시) - 0 ~ 10
+    5) user-scalable : 확대/축소 가능 여부(yes/no)
+
+    위 속성값은 ','로 구분하여 작성.
+
+미디어 쿼리(media query)
+    반응형 웹에서 CSS를 구분하여 작성하기 위한 쿼리
+    쿼리(질의어) - @meadia 키워드로 영역을 설정하여, 데스크탑 화면
+            또는 모바일 화면 시 적용할 CSS 스타일을 작성.
+
+    일반 CSS 스타일을 작성 한 다음 위치에 작성.
+    (문서 style태그 영역의 아래쪽)
+    
+    미디어쿼리 3단계형 분기점
+        화면의 너비 크기를 pc, 태블릿, 모바일 3가지로 구분하는 분기점.
+        1) pc : 1024px 이상
+        2) 태블릿 : 768px ~ 1023px
+        3) 모바일 : 768px 이하

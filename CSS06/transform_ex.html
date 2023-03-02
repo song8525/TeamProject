@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모양 변환</title>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            background-color: red;
+            margin-left: 50px;
+            color: white;
+        }
+        .box1{
+            /* transform: translate(20px, 10px); */
+            /* transform: translateX(50px); */
+            transform: translateY(30px);
+        }
+        .box2:hover{
+            transform: rotate(45deg);
+            border-radius: 50%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .box3:hover{
+            transform: scale(2, 2);
+        }
+        .box4:hover{
+            /* transform: skew(20deg, 20deg); */
+            /* transform: skewX(20deg); */
+            transform: skewY(20deg);
+            /* rotate 속성과 비슷한 속성임으로 같이 사용 불가능하며 먼저 나온 속성을 적용*/
+        }.box5:hover{
+            width: 100px;
+            /* translate와 width 모두 크기 변환이 가능하지만 기준점이 다름 */
+        }
+    </style>
+</head>
+<body>
+    <h2>위치 변환</h2>
+    <div class="box1">1</div>
+    <h2>각도 변환</h2>
+    <div class="box2">2</div>
+    <h2>크기 변환</h2>
+    <div class="box3">3</div>
+    <h2>기울기 변환</h2>
+    <div class="box4">4</div>
+    <h2>크기 변환</h2>
+    <div class="box5">5</div>
+</body>
+</html>
